@@ -3,17 +3,16 @@ Queso
 
 Exploring how JISON and language parsers work, by building a CSS preprocessor
 
-To create the parser run
+To generate quesoParser.js file run
 ```
 make
 ```
-this will generate a lib/quesoParser.js file
 
-Then run
+To generate the outputted css us the provided bin/queso
 ```
 bin/queso samples/plain.css
 ```
-to generate the outputted css
+
 
 
 
@@ -24,8 +23,9 @@ run the tests with
 
 ```
 make test
+```
+Or to watch the files and re-run the test on changes with
 
-// or to watch the files and re-run the test on changes with
-
+```
 make watch
 ```

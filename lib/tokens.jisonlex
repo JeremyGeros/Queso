@@ -27,6 +27,8 @@ SELECTOR              (\.|\#|\:\:|\:){NAME} // matches: #id, .class, :hover and 
 {SELECTOR}            return 'SELECTOR'
 {NAME}{SELECTOR}      return 'SELECTOR'
 
+\@{NAME}              return 'VARIABLE' // @VARAIBLE
+
 {NAME}                return 'IDENTIFIER'
 
 .                     return yytext

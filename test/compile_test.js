@@ -35,4 +35,23 @@ describe('Compilation to CSS', function() {
     assert.equal(parser.parse(code).toCSS(),
                               "p { width: 10px; }")
   })
+
+  it('compiles the css compressed', function () {
+    var code = "h1 {\n" +
+               "  p { font-size: 10px; }\n" +
+               "}"
+
+    assert.equal(parser.parse(code).toCSS('compress'),
+                 "h1{}h1 p{font-size:10px;}")
+  })
+
+  it('compiles the css indent', function () {
+    var code = "h1 {\n" +
+               "  p { font-size: 10px; }\n" +
+               "}"
+
+    assert.equal(parser.parse(code).toCSS('indent'),
+                 "h1 {  }\n" +
+                 "  h1 p { font-size: 10px; }")
+  })
 })

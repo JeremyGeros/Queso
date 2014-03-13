@@ -15,6 +15,11 @@ SELECTOR              (\.|\#|\:\:|\:){NAME} // matches: #id, .class, :hover and 
 
 //// Rules
 
+
+{NAME}\s{NAME}            return 'IDENTIFIER'
+{SELECTOR}\s{SELECTOR}        return 'IDENTIFIER'
+
+
 \s+                   //ignore whitespace
 
 //NUMBERS
@@ -23,13 +28,15 @@ SELECTOR              (\.|\#|\:\:|\:){NAME} // matches: #id, .class, :hover and 
 \#[0-9A-Fa-f]{3,6}    return 'COLOR'
 
 
-//SELECTORs
+//SELECTORS
 {SELECTOR}            return 'SELECTOR'
 {NAME}{SELECTOR}      return 'SELECTOR'
 
 \@{NAME}              return 'VARIABLE' // @VARAIBLE
 
+
 {NAME}                return 'IDENTIFIER'
+
 
 .                     return yytext
 

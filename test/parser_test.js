@@ -90,6 +90,16 @@ describe('Parser', function() {
     })
   })
 
+  describe('complex selectors', function () {
+    it('parses h1 p', function() {
+      assert.deepEqual(parser.parse("h1 p {}"),
+      new nodes.StyleSheet([
+        new nodes.Rule('h1 p', [])
+      ]))
+    });
+
+  });
+
   // Helpers
   function parseRule(css) {
     return parser.parse(css).rules[0]

@@ -1,23 +1,23 @@
 {
-  "name": "sss",
-  "version": "0.0.1",
-  "description": "Super Style Sheets",
-  "main": "lib/sss.js",
+  "name": "Queso",
+  "version": "0.2",
+  "description": "Queso",
+  "main": "lib/quesoParser.js",
   "scripts": {
     "test": "make test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/codedinc/sss.git"
+    "url": "git://github.com/JeremyGeros/Queso.git"
   },
   "keywords": [
     "css",
     "parser",
     "compiler"
   ],
-  "author": "Marc-Andre Cournoyer",
+  "author": "Jeremy Geros",
   "bugs": {
-    "url": "https://github.com/codedinc/sss/issues"
+    "url": "https://github.com/JeremyGeros/Queso/issues"
   },
   "dependencies": {
     "jison": "0.4.x",
